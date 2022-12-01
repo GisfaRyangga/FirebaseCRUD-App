@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_margin="15dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/name_et"
+        android:background="@drawable/borderteks"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/address_et"
+        android:background="@drawable/borderteks"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INSERT"
+        android:id="@+id/insert_btn"
+        android:background="@drawable/borderteks"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="READ LATEST DATA"
+        android:id="@+id/read_btn"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/borderteks"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/update_name_et"
+        android:background="@drawable/borderteks"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/update_address_et"
+        android:background="@drawable/borderteks"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UPDATE DATA"
+        android:id="@+id/update_btn"
+        android:background="@drawable/borderteks"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DELETE DATA"
+        android:id="@+id/delete_btn"
+        android:background="@drawable/borderteks"
+        android:layout_marginBottom="10dp"/>
+
+</LinearLayout>
