@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class CRUD_Football extends AppCompatActivity {
-    EditText player_namaET, regionET, updataPlayernama, updateRegion;
+    EditText player_namaET, player_regionET, updataPlayernama, updateRegion;
     Button insert_player_btn, read_player_btn, update_player_btn, delete_player_btn, student_button;
 
     DatabaseReference mDatabaseReference;
@@ -31,7 +31,7 @@ public class CRUD_Football extends AppCompatActivity {
         mDatabaseReference = FirebaseDatabase.getInstance().getReference(FootballPlayer.class.getSimpleName());
 
         player_namaET = findViewById(R.id.player_name_et);
-        regionET = findViewById(R.id.player_region_et);
+        player_regionET = findViewById(R.id.player_region_et);
         insert_player_btn = findViewById(R.id.insert_player_btn);
         read_player_btn = findViewById(R.id.read_player_btn);
         updataPlayernama = findViewById(R.id.update_player_name_et);
@@ -80,7 +80,7 @@ public class CRUD_Football extends AppCompatActivity {
     private void insertPlayer(){
         FootballPlayer mfootballPlayer = new FootballPlayer();
         String name = player_namaET.getText().toString();
-        String region = regionET.getText().toString();
+        String region = player_regionET.getText().toString();
         if (name != "" && region != ""){
             mfootballPlayer.setName(name);
             mfootballPlayer.setRegion(region);
