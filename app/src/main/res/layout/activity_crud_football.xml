@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CRUD STUDENT"
+        android:text="FOOTBALL PLAYER CRUD"
         android:textAlignment="center"
         android:layout_marginBottom="20dp"
         android:textSize="35dp"
@@ -20,74 +20,74 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/name_et"
+        android:id="@+id/player_name_et"
         android:background="@drawable/borderteks"
         android:layout_marginBottom="5dp"
         android:padding="10dp"
-        android:hint="Student Name"/>
+        android:hint="Player Name"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/address_et"
+        android:id="@+id/player_region_et"
         android:background="@drawable/borderteks"
         android:layout_marginBottom="5dp"
         android:padding="10dp"
-        android:hint="Student Address"/>
+        android:hint="Player Region"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="INSERT"
-        android:id="@+id/insert_btn"
+        android:id="@+id/insert_player_btn"
         android:backgroundTint="#193CFF"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="READ LATEST DATA"
-        android:id="@+id/read_btn"
+        android:id="@+id/read_player_btn"
         android:backgroundTint="#ADC52D"
         android:layout_marginBottom="20dp"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/update_name_et"
+        android:id="@+id/update_player_name_et"
         android:background="@drawable/borderteks"
         android:layout_marginBottom="5dp"
         android:padding="10dp"
-        android:hint="Student Name"/>
+        android:hint="Player Name"/>
 
     <EditText
+        android:id="@+id/update_player_region_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/update_address_et"
-        android:background="@drawable/borderteks"
         android:layout_marginBottom="5dp"
-        android:padding="10dp"
-        android:hint="Student Address"/>
+        android:background="@drawable/borderteks"
+        android:hint="Player Region"
+        android:padding="10dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="UPDATE DATA"
-        android:id="@+id/update_btn"
+        android:id="@+id/update_player_btn"
         android:backgroundTint="#193CFF"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="DELETE DATA"
-        android:id="@+id/delete_btn"
+        android:id="@+id/delete_player_btn"
         android:backgroundTint="#DF2230"
         android:layout_marginBottom="50dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Football Player CRUD"
-        android:id="@+id/fp_btn"
+        android:text="CRUD Student"
+        android:id="@+id/student_btn"
         android:background="@drawable/borderteks"
         android:layout_marginBottom="10dp"/>
 </LinearLayout>

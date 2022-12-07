@@ -3,6 +3,7 @@ package com.example.firebaseapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,8 +18,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText namaET, addressET, updatanama, updateaddress;
-    Button insertbtn, readbtn, updatebtn, deletebtn;
+    EditText namaET, addressET, updatenama, updateaddress;
+    Button insertbtn, readbtn, updatebtn, deletebtn, fp_button;
 
     DatabaseReference mDatabaseReference;
     Student mStudent;
@@ -34,10 +35,11 @@ public class MainActivity extends AppCompatActivity {
         addressET = findViewById(R.id.address_et);
         insertbtn = findViewById(R.id.insert_btn);
         readbtn = findViewById(R.id.read_btn);
-        updatanama = findViewById(R.id.update_name_et);
+        updatenama = findViewById(R.id.update_name_et);
         updateaddress = findViewById(R.id.update_address_et);
         updatebtn = findViewById(R.id.update_btn);
         deletebtn = findViewById(R.id.delete_btn);
+        fp_button = findViewById(R.id.fp_btn);
 
         insertbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +66,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 deleteData();
+            }
+        });
+
+        fp_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CRUD_Football.class);
+                startActivity(intent);
             }
         });
     }
@@ -93,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                         mStudent.setAddress(currentData.child("address").getValue().toString());
                     }
                 }
-                updatanama.setText(mStudent.getName());
+                updatenama.setText(mStudent.getName());
                 updateaddress.setText(mStudent.getAddress());
                 Toast.makeText(MainActivity.this, "Data telah ditampilkan", Toast.LENGTH_SHORT).show();
             }
@@ -107,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateData(){
         Student updateData = new Student();
-        updateData.setName(updatanama.getText().toString());
+        updateData.setName(updatenama.getText().toString());
         updateData.setAddress(updateaddress.getText().toString());
 
         mDatabaseReference.child(key).setValue(updateData);
@@ -116,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void deleteData(){
         Student updateData = new Student();
-        updateData.setName(updatanama.getText().toString());
+        updateData.setName(updatenama.getText().toString());
         updateData.setAddress(updateaddress.getText().toString());
 
         mDatabaseReference.child(key).removeValue();
